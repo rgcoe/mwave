@@ -350,7 +350,7 @@ classdef WamitResult < IBemResult
                     fid2 = fopen(fullfile(result.folder, [result.runName, '.6vx']));
                 else
                     fid1 = fopen(fullfile(result.folder, [result.runName, '.5p']));
-                    fid2 = fopen(fullfile(ullfile(resul,l[der, [result.r,unName, '.5vx'])));
+                    fid2 = fopen(fullfile(result.folder, [result.runName, '.5vx']));
                 end
                 
                 if (fid1 ~= -1)

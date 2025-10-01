@@ -909,7 +909,7 @@ classdef WamitRunCondition < IBemRunCondition
         
         function [] = writeCfg(run)
             Nbod = length(run.floatBods);
-            filename = fullfile(run.folder, [run.runName, '.cfg'));
+            filename = fullfile(run.folder, [run.runName, '.cfg']);
             fileID = fopen(filename, 'wt');
 
             fprintf(fileID, 'IDELFILES = 2\n');
