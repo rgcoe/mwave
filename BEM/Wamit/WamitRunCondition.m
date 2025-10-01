@@ -909,7 +909,7 @@ classdef WamitRunCondition < IBemRunCondition
         
         function [] = writeCfg(run)
             Nbod = length(run.floatBods);
-            filename = fullfile(run.folder,'' run.runName '.cfg');
+            filename = fullfile(run.folder, [run.runName, '.cfg'));
             fileID = fopen(filename, 'wt');
 
             fprintf(fileID, 'IDELFILES = 2\n');
@@ -1083,7 +1083,7 @@ classdef WamitRunCondition < IBemRunCondition
         end
         
         function [] = writeFrc(run)
-            filename = fullfile(run.folder,'' run.runName '.frc');
+            filename = fullfile(run.folder, [run.runName, '.frc']);
             fileID = fopen(filename, 'wt');
             
             % header
@@ -1286,7 +1286,7 @@ classdef WamitRunCondition < IBemRunCondition
                                                            % any additional indices will refer to damping plates.  
             
             % Now, open and write the RAO file to be read in by WAMIT            
-            filename = fullfile(run.folder,'' run.runName '.rao');
+            filename = fullfile(run.folder, [run.runName, '.rao']);
             fileID = fopen(filename, 'wt');
             
             % header
@@ -1308,7 +1308,7 @@ classdef WamitRunCondition < IBemRunCondition
         end % writeRAOs
         
         function [] = writePot(run)
-            filename = fullfile(run.folder,'' run.runName '.pot');
+            filename = fullfile(run.folder, [run.runName, '.pot']);
             fileID = fopen(filename, 'wt');
             
             % header
