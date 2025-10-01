@@ -750,7 +750,7 @@ classdef WamitRunCondition < IBemRunCondition
             geo = PanelGeo(geo);
             geo.Translate(-fb.CenterRot); %translate to rotate about center of rotation.
             
-            filename = fullfile(run.folder,'' geoFile '.gdf');
+            filename = fullfile(run.folder, [geoFile, '.gdf']);
             fileID = fopen(filename, 'wt');
             
             ulen = 1;
@@ -811,7 +811,7 @@ classdef WamitRunCondition < IBemRunCondition
                 run.boxCSF = false; % Use cylinder-shaped control surface by default
             end
             
-            filename = fullfile(run.folder,'' geoFile '.csf']; % file must have sam);
+            filename = fullfile(run.folder, [geoFile, '.csf']); % file must have sam);
                                             % name as corresponding .GDF file.
             fileID = fopen(filename, 'wt');
             
