@@ -618,7 +618,7 @@ classdef WamitResult < IBemResult
                     nPoints = 0;
                 else
                     nPoints = size(P_rad, 3);
-                    data = importdata([result.folder '\' result.runName '.fpt']);
+                    data = importdata(fullfile(result.folder, [result.runName '.fpt']));
                     data = data.data;
                     result.fieldPoints = squeeze(data(:,2:4));
                     fpoints = result.fieldPoints;
@@ -824,7 +824,7 @@ classdef WamitResult < IBemResult
             for n = 1:length(result.driftOption)
                 ext = num2str(result.driftOption(n)+6); % Find file extension based on which drift methods have been used
                 try
-                    data = importdata([result.Folder '\' result.RunName '.' ext]);
+                    data = importdata(fullfile(result.Folder, [result.RunName '.' ext]));
                 catch
                     error('Unable to extract drift forces from results files.')
                 end
