@@ -525,7 +525,7 @@ classdef WamitRunCondition < IBemRunCondition
                 delete(fullfile(run.folder,'*.spl'));
                 delete(fullfile(run.folder,'*.ms2'));
             end
-            delete(fullfile(run.folder,'*.1']); 
+            delete(fullfile(run.folder,'*.1')); 
             delete(fullfile(run.folder,'*.2'));
             delete(fullfile(run.folder,'*.3'));
             delete(fullfile(run.folder,'*.4'));
