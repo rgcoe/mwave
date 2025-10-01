@@ -25,7 +25,7 @@ function [A, B, T, Modes, Ainf, A0] = Wamit_read1(folderpath, runname, rho)
 % zero frequency, infinite period added mass (A0);
 
 % Read in the file and ignore the header line.
-fid = fopen([folderpath '\' runname '.1']);
+fid = fopen(fullfile(folderpath,[runname,'.1']));
 head = fgetl(fid);
 
 n = 0;
